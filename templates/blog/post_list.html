@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<html>
+	<head>
+		<title>
+			first blog
+		</title>
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<style>
+            .dam {
+    		background-color: #D3ECF5;
+    		margin-top: 0;
+    		padding: 20px 20px 20px 40px;
+		}
+		
+
+		.post{
+		padding-left:40px
+		}
+		.stat{
+		padding-left:60px
+		}
+        </style>
+		
+	</head>
+	<body>
+		
+
+		<div class="dam">
+			<h1><a href="/">C++</a></h1>
+		</div>
+		{% for post in posts %}
+			<div class="post">
+				
+				<h1><a href="">{{post.title}}</a></h1>
+				<p>published: {{post.published_date}}</p>
+				<div class="stat">
+				<p>{{post.text|linebreaksbr}}</p>
+				</div>
+			</div>
+		{%endfor%}
+	</body>
+</html>

@@ -23,17 +23,22 @@
 		.stat{
 		padding-left:60px
 		}
+		.button1{
+		padding-left:40px
+		}
+		
         </style>
 		
 	</head>
 	<body>
-		
+	
 
 		<div class="dam">
 			<h1><a href="/">C++</a></h1>
 		</div>
-		{% for post in posts %}
-			<div class="post">
+
+		{% for post in postss %}
+			<div class="post2" id="post2" >
 				
 				<h1><a href="">{{post.title}}</a></h1>
 				<p>published: {{post.published_date}}</p>
@@ -41,6 +46,14 @@
 				<p>{{post.text|linebreaksbr}}</p>
 				</div>
 			</div>
+			
 		{%endfor%}
+
+
+		
+		
+		
+		
+		
 	</body>
 </html>
